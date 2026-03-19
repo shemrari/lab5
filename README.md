@@ -1,14 +1,7 @@
 # Analyse de l'APK UnCrackable Level 2 — Recherche du secret natif
 
-## Vue d'ensemble
 
-Dans ce travail pratique, on s'intéresse à une application Android intentionnellement vulnérable tirée du projet **OWASP MSTG** : **UnCrackable Level 2**.
 
-Le principe est simple en apparence — l'application demande un mot de passe secret — mais la vérification ne se fait pas dans le code Java traditionnel. Elle est déléguée à une **bibliothèque native** via **JNI (Java Native Interface)**, ce qui complique l'analyse directe.
-
-Le but de ce rapport est de documenter pas à pas comment on est arrivé à retrouver cette valeur secrète en combinant décompilation Java, extraction d'APK et analyse de fichier `.so` avec **Ghidra**.
-
----
 
 ## Environnement de travail
 
@@ -234,8 +227,7 @@ La valeur retrouvée par analyse statique est correcte. L'objectif du laboratoir
 
 Le mot de passe attendu par l'application **UnCrackable Level 2** est :
 
-```text
-Thanks for all the fish
+
 ```
 
 ---
