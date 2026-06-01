@@ -26,8 +26,9 @@ adb install uncrackable2.apk
 
 Une fois l'application démarrée, l'interface présente un champ de texte unique accompagné d'un bouton **VERIFY**. Aucune indication sur la nature ou la longueur du mot de passe attendu n'est fournie à l'utilisateur.
 
-### 📸 Image 1 — Interface principale de l'application
-<img width="320" height="715" alt="Screenshot 2026-03-17 233258" src="https://github.com/user-attachments/assets/2e5f5998-348e-4087-8584-9f854f6d8003" />
+### Image 1 — Interface principale
+
+
 
 
 ---
@@ -49,8 +50,8 @@ That's not it. Try again.
 
 Ce retour confirme qu'une comparaison est bien effectuée en arrière-plan entre la saisie et une valeur de référence. L'objectif est de remonter jusqu'à cette valeur de référence.
 
-### 📸 Image 2 — Message d'échec après une mauvaise saisie
-<img width="325" height="706" alt="Screenshot 2026-03-17 233315" src="https://github.com/user-attachments/assets/08bac056-9d5a-4c12-9c5a-30e7bf9a7b6a" />
+### Image 2 — Message d'échec après une mauvaise saisie
+
 
 
 
@@ -80,7 +81,7 @@ this.m.a(string);
 
 La vérification n'est donc pas dans `MainActivity` elle-même. Elle est externalisée vers un objet de type différent, ce qui nous amène à chercher dans les classes auxiliaires.
 
-### 📸 Image 3 — Décompilation de MainActivity dans JADX
+### Image 3 — Décompilation de MainActivity dans JADX
 <img width="1043" height="676" alt="Screenshot 2026-03-17 233330" src="https://github.com/user-attachments/assets/50955979-815b-4768-ad5c-f823f4b52684" />
 
 ---
@@ -109,7 +110,7 @@ Trois observations importantes :
 
 Cette architecture JNI est couramment utilisée pour rendre la rétro-ingénierie plus difficile.
 
-### 📸 Image 4 — Code de la classe CodeCheck dans JADX
+### Image 4 — Code de la classe CodeCheck dans JADX
 <img width="614" height="318" alt="Screenshot 2026-03-17 233346" src="https://github.com/user-attachments/assets/899a63f5-5134-4e5d-b976-f73ef48e6b9c" />
 
 ---
@@ -146,7 +147,8 @@ Chemin complet utilisé pour la suite :
 uncrackable_12/lib/x86/libfoo.so
 ```
 
-### 📸 Image 5 — Terminal PowerShell montrant libfoo.so
+### Image 5 — Terminal PowerShell montrant libfoo.so
+
 <img width="789" height="788" alt="Screenshot 2026-03-17 233449" src="https://github.com/user-attachments/assets/244cab77-36ed-4754-b375-e222abd60a14" />
 
 lib/x86/libfoo.so visible.
@@ -194,7 +196,7 @@ La valeur secrète est donc directement visible dans le binaire :
 Thanks for all the fish
 ```
 
-### 📸 Image 6 — Pseudo-code Ghidra avec la chaîne secrète
+### Image 6 — Pseudo-code Ghidra (chaîne secrète)
 
 <img width="896" height="480" alt="Screenshot 2026-03-17 233514" src="https://github.com/user-attachments/assets/21844d4a-4fd2-4e14-b933-a2c9fd35cc00" />
 
@@ -217,7 +219,7 @@ This is the correct secret.
 
 La valeur retrouvée par analyse statique est correcte. L'objectif du laboratoire est atteint.
 
-### 📸 Image 7 — Message de succès dans l'émulateur
+### Image 7 — Message de succès dans l'émulateur
 <img width="351" height="784" alt="Screenshot 2026-03-17 233537" src="https://github.com/user-attachments/assets/61f544d9-8e4a-48cf-81cc-222569007f4b" />
 
 
